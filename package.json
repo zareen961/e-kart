@@ -1,0 +1,27 @@
+{
+  "name": "e-cart",
+  "version": "1.0.0",
+  "description": "Mern Shopping cart",
+  "main": "index.js",
+  "scripts": {
+    "app": "concurrently \"npm run server\" \"npm run client\" ",
+    "server": "nodemon backend",
+    "client": "npm start --prefix frontend",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d"
+  },
+  "author": "Ifa Zareen",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.15"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.7"
+  }
+}
